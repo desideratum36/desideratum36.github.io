@@ -1076,7 +1076,7 @@ var enstars = [
         "uimg": "images\\Ra_bits.png",
         "year": "Graduated",
         "hc": "Blond",
-        "ec": "Red|Maroon",
+        "ec": "Red",
         "c": "#FFEC47",
         "bt": "O",
         "h": 160,
