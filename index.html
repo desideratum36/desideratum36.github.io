@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="">
     <script>
         var cd = new Date();
-        window.d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 50);
+        window.d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 49);
     </script>
     <script src="./enstars.js"></script>
 </head>
@@ -265,7 +265,7 @@
     <script>
         function random_button() {
             var q = new Date();
-            d = Math.floor(Math.abs(Math.sin(Math.sqrt(q.getMilliseconds() * Math.E))) * 50);
+            d = Math.floor(Math.abs(Math.sin(Math.sqrt(q.getMilliseconds() * Math.E))) * 49);
             console.log("Randomized!");
             document.getElementById("enstar_input").disabled = false;
             document.getElementById("enstar_button").disabled = false;
@@ -295,7 +295,7 @@
         }
         document.getElementById("random").addEventListener("click", random_button, false)
         function daily_button() {
-            d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 50);
+            d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 49);
             document.getElementById("enstar_input").disabled = false;
             document.getElementById("enstar_button").disabled = false;
             game_won = false;
