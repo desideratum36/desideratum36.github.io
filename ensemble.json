@@ -1,0 +1,1525 @@
+[
+    {
+        "name": "Eichi Tenshouin",
+        "nimg": "images\\Eichi_Tenshouin.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "fine",
+        "uimg": "images\\Fine.png",
+        "year": "Graduated",
+        "hc": "Blond",
+        "ec": "Blue",
+        "c": "#FFF3B8",
+        "bt": "O",
+        "h": 179,
+        "w": 59,
+        "circles": [
+            "FLAVOR",
+            "Sports Survivors"
+        ],
+        "currentrm": [
+            "Aira Shiratori",
+            "Rei Sakuma"
+        ],
+        "pastrm": [],
+        "ss": "Capricorn",
+        "age": "18-19",
+        "shuffle": [
+            "Ring.A.Bell"
+        ]
+    },
+    {
+        "name": "Wataru Hibiki",
+        "nimg": "images\\Wataru_Hibiki.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "fine",
+        "uimg": "images\\Fine.png",
+        "year": "Graduated",
+        "hc": "Blue",
+        "ec": "Purple",
+        "c": "#A1D8E2",
+        "bt": "AB",
+        "h": 180,
+        "w": 63,
+        "circles": [
+            "Dramatica",
+            "ANIMALS"
+        ],
+        "currentrm": [
+            "Madara Mikejima",
+            "Sora Harukawa",
+            "Subaru Akehoshi"
+        ],
+        "pastrm": [],
+        "ss": "Pisces",
+        "age": "18-19",
+        "shuffle": [
+            "Puffy*Bunny"
+        ]
+    },
+    {
+        "name": "Tori Himemiya",
+        "nimg": "images\\Tori_Himemiya.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "fine",
+        "uimg": "images\\Fine.png",
+        "year": "2",
+        "hc": "Pink",
+        "ec": "Green",
+        "c": "#F5B2B2",
+        "bt": "B",
+        "h": 153,
+        "w": 49,
+        "circles": [
+            "Manga Club",
+            "Pretty 5"
+        ],
+        "currentrm": [
+            "Yuzuru Fushimi",
+            "Raika"
+        ],
+        "pastrm": [],
+        "ss": "Capricorn",
+        "age": "16-17",
+        "shuffle": [
+            "Branco"
+        ]
+    },
+    {
+        "name": "Yuzuru Fushimi",
+        "nimg": "images\\Yuzuru_Fushimi.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "fine",
+        "uimg": "images\\Fine.png",
+        "year": "3",
+        "hc": "Blue",
+        "ec": "Purple",
+        "c": "#3E62AD",
+        "bt": "A",
+        "h": 175,
+        "w": 60,
+        "circles": [
+            "Niki's Kitchen",
+            "Keito Lecture"
+        ],
+        "currentrm": [
+            "Tori Himemiya",
+            "Raika"
+        ],
+        "pastrm": [],
+        "ss": "Libra",
+        "age": "17-18",
+        "shuffle": [
+            "Flambe",
+            "MVNV\r"
+        ]
+    },
+    {
+        "name": "Hokuto Hidaka",
+        "nimg": "images\\Hokuto_Hidaka.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "TrickStar",
+        "uimg": "images\\TrickStar.png",
+        "year": "3",
+        "hc": "Black",
+        "ec": "Blue",
+        "c": "#0068B7",
+        "bt": "A",
+        "h": 173,
+        "w": 55,
+        "circles": [
+            "Dramatica",
+            "CRAFTMONSTER"
+        ],
+        "currentrm": [
+            "Keito Hasumi",
+            "Hajime Shino"
+        ],
+        "pastrm": [],
+        "ss": "Sagittarius",
+        "age": "17-18",
+        "shuffle": [
+            "Getto Spectacle",
+            "EVIL NUM+\r"
+        ]
+    },
+    {
+        "name": "Subaru Akehoshi",
+        "nimg": "images\\Subaru_Akehoshi.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "TrickStar",
+        "uimg": "images\\TrickStar.png",
+        "year": "3",
+        "hc": "Orange|Brown",
+        "ec": "Blue",
+        "c": "#F3981D",
+        "bt": "O",
+        "h": 171,
+        "w": 55,
+        "circles": [
+            "Sports Survivors",
+            "ANIMALS"
+        ],
+        "currentrm": [
+            "Sora Harukawa",
+            "Wataru Hibiki",
+            "Madara Mikejima"
+        ],
+        "pastrm": [],
+        "ss": "Cancer",
+        "age": "17-18",
+        "shuffle": [
+            "Flambe"
+        ]
+    },
+    {
+        "name": "Makoto Yuuki",
+        "nimg": "images\\Makoto_Yuuki.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "TrickStar",
+        "uimg": "images\\TrickStar.png",
+        "year": "3",
+        "hc": "Blond",
+        "ec": "Green",
+        "c": "#65AB31",
+        "bt": "O",
+        "h": 174,
+        "w": 58,
+        "circles": [
+            "CRAFTMONSTER",
+            "Mystery Researchers"
+        ],
+        "currentrm": [
+            "Adonis Otogari",
+            "Chiaki Morisawa"
+        ],
+        "pastrm": [],
+        "ss": "Taurus",
+        "age": "17-18",
+        "shuffle": [
+            "XXVeil"
+        ]
+    },
+    {
+        "name": "Mao Isara",
+        "nimg": "images\\Mao_Isara.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "TrickStar",
+        "uimg": "images\\TrickStar.png",
+        "year": "3",
+        "hc": "Red|Maroon",
+        "ec": "Green",
+        "c": "#941F57",
+        "bt": "O",
+        "h": 169,
+        "w": 54,
+        "circles": [
+            "Manga Club",
+            "BB"
+        ],
+        "currentrm": [
+            "Shu Itsuki",
+            "Izumi Sena",
+            "Kuro Kiryu"
+        ],
+        "pastrm": [],
+        "ss": "Pisces",
+        "age": "17-19",
+        "shuffle": [
+            "Ring.A.Bell"
+        ]
+    },
+    {
+        "name": "Tetora Nagumo",
+        "nimg": "images\\Tetora_Nagumo.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Ryuseitai",
+        "uimg": "images\\Ryuseitai.png",
+        "year": "2",
+        "hc": "Black/Red",
+        "ec": "Orange|Brown",
+        "c": "#302833",
+        "bt": "A",
+        "h": 170,
+        "w": 55,
+        "circles": [
+            "SHIN",
+            "Ibara Lecture"
+        ],
+        "currentrm": [
+            "Arashi Narukami",
+            "HiMERU"
+        ],
+        "pastrm": [],
+        "ss": "Gemini",
+        "age": "16-17",
+        "shuffle": [
+            "BUTOUKAI"
+        ]
+    },
+    {
+        "name": "Midori Takamine",
+        "nimg": "images\\Midori_Takamine.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Ryuseitai",
+        "uimg": "images\\Ryuseitai.png",
+        "year": "2",
+        "hc": "Orange|Brown",
+        "ec": "Green",
+        "c": "#00533F",
+        "bt": "O",
+        "h": 179,
+        "w": 64,
+        "circles": [
+            "Manga Club",
+            "Gardenia"
+        ],
+        "currentrm": [
+            "Ibara Saegusa",
+            "Mitsuru Tenma",
+            "Tsumugi Aoba"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "16-17",
+        "shuffle": [
+            "Ring.A.Bell"
+        ]
+    },
+    {
+        "name": "Shinobu Sengoku",
+        "nimg": "images\\Shinobu_Sengoku.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Ryuseitai",
+        "uimg": "images\\Ryuseitai.png",
+        "year": "2",
+        "hc": "Purple",
+        "ec": "Orange|Brown",
+        "c": "#FFDC00",
+        "bt": "AB",
+        "h": 160,
+        "w": 50,
+        "circles": [
+            "OCEANS",
+            "ASOBI Club"
+        ],
+        "currentrm": [
+            "Tsukasa Suou",
+            "Souma Kanzaki"
+        ],
+        "pastrm": [],
+        "ss": "Gemini",
+        "age": "16-17",
+        "shuffle": [
+            "Puffy*Bunny",
+            "Ha/Lo\r"
+        ]
+    },
+    {
+        "name": "Chiaki Morisawa",
+        "nimg": "images\\Chiaki_Morisawa.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Ryuseitai",
+        "uimg": "images\\Ryuseitai.png",
+        "year": "Graduated",
+        "hc": "Orange|Brown",
+        "ec": "Orange|Brown",
+        "c": "#E60033",
+        "bt": "O",
+        "h": 175,
+        "w": 60,
+        "circles": [
+            "SHIN",
+            "Sports Survivors"
+        ],
+        "currentrm": [
+            "Adonis Otogari",
+            "Makoto Yuuki"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "18-19",
+        "shuffle": [
+            "/AtoZ"
+        ]
+    },
+    {
+        "name": "Kanata Shinkai",
+        "nimg": "images\\Kanata_Shinkai.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Ryuseitai",
+        "uimg": "images\\Ryuseitai.png",
+        "year": "Graduated",
+        "hc": "Blue",
+        "ec": "Green",
+        "c": "#008DB7",
+        "bt": "B",
+        "h": 176,
+        "w": 60,
+        "circles": [
+            "OCEANS",
+            "Mystery Researchers"
+        ],
+        "currentrm": [
+            "Rinne Amagi",
+            "Hiyori Tomoe"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "18-19",
+        "shuffle": [
+            "Getto Spectacle"
+        ]
+    },
+    {
+        "name": "Hiiro Amagi",
+        "nimg": "images\\Hiiro_Amagi.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Alkaloid",
+        "uimg": "images\\Alkaloid.png",
+        "year": "2",
+        "hc": "Red|Maroon",
+        "ec": "Blue",
+        "c": "#BA2636",
+        "bt": "A",
+        "h": 174,
+        "w": 57,
+        "circles": [
+            "SHIN",
+            "Keito Lecture"
+        ],
+        "currentrm": [
+            "Hinata Aoi",
+            "Niki Shiina"
+        ],
+        "pastrm": [
+            [
+                "Aira Shiratori",
+                "Tatsumi Kazehaya",
+                "Mayoi Ayase"
+            ]
+        ],
+        "ss": "Capricorn",
+        "age": "16-17",
+        "shuffle": [
+            "Puffy*Bunny"
+        ]
+    },
+    {
+        "name": "Aira Shiratori",
+        "nimg": "images\\Aira_Shiratori.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Alkaloid",
+        "uimg": "images\\Alkaloid.png",
+        "year": "1",
+        "hc": "Blond",
+        "ec": "Green",
+        "c": "#FFF0CF",
+        "bt": "B",
+        "h": 167,
+        "w": 53,
+        "circles": [
+            "Pretty 5",
+            "Keito Lecture"
+        ],
+        "currentrm": [
+            "Eichi Tenshouin",
+            "Rei Sakuma"
+        ],
+        "pastrm": [
+            [
+                "Hiiro Amagi",
+                "Tatsumi Kazehaya",
+                "Mayoi Ayase"
+            ]
+        ],
+        "ss": "Sagittarius",
+        "age": "15-16",
+        "shuffle": [
+            "Branco"
+        ]
+    },
+    {
+        "name": "Mayoi Ayase",
+        "nimg": "images\\Mayoi_Ayase.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Alkaloid",
+        "uimg": "images\\Alkaloid.png",
+        "year": "3",
+        "hc": "Purple",
+        "ec": "Blue",
+        "c": "#522F60",
+        "bt": "O",
+        "h": 174,
+        "w": 55,
+        "circles": [
+            "Sweets Fan Club",
+            "Overnight Outdoors Party"
+        ],
+        "currentrm": [
+            "Tomoya Mashiro"
+        ],
+        "pastrm": [
+            [
+                "Ibuki Taki"
+            ],
+            [
+                "Hiiro Amagi",
+                "Aira Shiratori",
+                "Tatsumi Kazehaya"
+            ]
+        ],
+        "ss": "Gemini",
+        "age": "17-18",
+        "shuffle": [
+            "La Mort"
+        ]
+    },
+    {
+        "name": "Tatsumi Kazehaya",
+        "nimg": "images\\Tatsumi_Kazehaya.png",
+        "agency": "STARMAKER PRODUCTION",
+        "aimg": "images\\STARMAKER_PRODUCTION.png",
+        "unit": "Alkaloid",
+        "uimg": "images\\Alkaloid.png",
+        "year": "3",
+        "hc": "Green ",
+        "ec": "Purple",
+        "c": "#7EBDA6",
+        "bt": "A",
+        "h": 177,
+        "w": 58,
+        "circles": [
+            "FLAVOR",
+            "Gardenia"
+        ],
+        "currentrm": [
+            "Koga Oogami"
+        ],
+        "pastrm": [
+            [
+                "Kanna"
+            ],
+            [
+                "Hiiro Amagi",
+                "Aira Shiratori",
+                "Mayoi Ayase"
+            ]
+        ],
+        "ss": "Capricorn",
+        "age": "18-19",
+        "shuffle": [
+            "Getto Spectacle"
+        ]
+    },
+    {
+        "name": "Nagisa Ran",
+        "nimg": "images\\Nagisa_Ran.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Eden",
+        "uimg": "images\\Eden.png",
+        "year": "Graduated",
+        "hc": "Blond",
+        "ec": "Yellow",
+        "c": "#A73736",
+        "bt": "B",
+        "h": 178,
+        "w": 62,
+        "circles": [
+            "BIBLION",
+            "Dramatica"
+        ],
+        "currentrm": [
+            "Kaoru Hakaze",
+            "Yuta Aoi"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "18-19",
+        "shuffle": [
+            "La Mort"
+        ]
+    },
+    {
+        "name": "Hiyori Tomoe",
+        "nimg": "images\\Hiyori_Tomoe.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Eden",
+        "uimg": "images\\Eden.png",
+        "year": "Graduated",
+        "hc": "Green ",
+        "ec": "Purple",
+        "c": "#B8D200",
+        "bt": "AB",
+        "h": 177,
+        "w": 61,
+        "circles": [
+            "Pretty 5",
+            "FLAVOR"
+        ],
+        "currentrm": [
+            "Rinne Amagi",
+            "Kanata Shinkai"
+        ],
+        "pastrm": [],
+        "ss": "Leo",
+        "age": "18-19",
+        "shuffle": [
+            "Getto Spectacle"
+        ]
+    },
+    {
+        "name": "Ibara Saegusa",
+        "nimg": "images\\Ibara_Saegusa.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Eden",
+        "uimg": "images\\Eden.png",
+        "year": "3",
+        "hc": "Red|Maroon",
+        "ec": "Blue",
+        "c": "#74325C",
+        "bt": "A",
+        "h": 172,
+        "w": 60,
+        "circles": [
+            "Niki's Kitchen",
+            "Ibara Lecture"
+        ],
+        "currentrm": [
+            "Midori Takamine",
+            "Mitsuru Tenma",
+            "Tsumugi Aoba"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "17-18",
+        "shuffle": [
+            "Flambe"
+        ]
+    },
+    {
+        "name": "Jun Sazanami",
+        "nimg": "images\\Jun_Sazanami.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Eden",
+        "uimg": "images\\Eden.png",
+        "year": "3",
+        "hc": "Blue",
+        "ec": "Yellow",
+        "c": "#192F60",
+        "bt": "O",
+        "h": 173,
+        "w": 61,
+        "circles": [
+            "Manga Club",
+            "ASOBI Club"
+        ],
+        "currentrm": [
+            "Kohaku Oukawa"
+        ],
+        "pastrm": [
+            [
+                "Esu"
+            ]
+        ],
+        "ss": "Leo",
+        "age": "17-18",
+        "shuffle": [
+            "BUTOUKAI"
+        ]
+    },
+    {
+        "name": "Shu Itsuki",
+        "nimg": "images\\Shu_Itsuki.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Valkyrie",
+        "uimg": "images\\Valkyrie.png",
+        "year": "Graduated",
+        "hc": "Pink",
+        "ec": "Purple",
+        "c": "#E3ACAE",
+        "bt": "A",
+        "h": 177,
+        "w": 59,
+        "circles": [
+            "Dramatica",
+            "CRAFTMONSTER"
+        ],
+        "currentrm": [
+            "Izumi Sena",
+            "Kuro Kiryu",
+            "Mao Isara"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "18-19",
+        "shuffle": [
+            "BLEND+"
+        ]
+    },
+    {
+        "name": "Mika Kagehira",
+        "nimg": "images\\Mika_Kagehira.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Valkyrie",
+        "uimg": "images\\Valkyrie.png",
+        "year": "3",
+        "hc": "Black",
+        "ec": "Yellow/Blue",
+        "c": "#006A6C",
+        "bt": "B",
+        "h": 171,
+        "w": 54,
+        "circles": [
+            "Pretty 5",
+            "Keito Lecture"
+        ],
+        "currentrm": [
+            "Ritsu Sakuma"
+        ],
+        "pastrm": [
+            [
+                "Yume"
+            ]
+        ],
+        "ss": "Capricorn",
+        "age": "17-18",
+        "shuffle": [
+            "Puffy*Bunny"
+        ]
+    },
+    {
+        "name": "Hinata Aoi",
+        "nimg": "images\\Hinata_Aoi.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "2wink",
+        "uimg": "images\\2wink.png",
+        "year": "2",
+        "hc": "Orange|Brown",
+        "ec": "Green",
+        "c": "#EB6EA0",
+        "bt": "AB",
+        "h": 170,
+        "w": 54,
+        "circles": [
+            "BB",
+            "Gardenia"
+        ],
+        "currentrm": [
+            "Hiiro Amagi",
+            "Niki Shiina"
+        ],
+        "pastrm": [],
+        "ss": "Pisces",
+        "age": "16-17",
+        "shuffle": [
+            "Puffy*Bunny",
+            "EVIL NUM+\r"
+        ]
+    },
+    {
+        "name": "Yuta Aoi",
+        "nimg": "images\\Yuta_Aoi.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "2wink",
+        "uimg": "images\\2wink.png",
+        "year": "2",
+        "hc": "Orange|Brown",
+        "ec": "Green",
+        "c": "#00A1E9",
+        "bt": "AB",
+        "h": 170,
+        "w": 54,
+        "circles": [
+            "BB",
+            "ASOBI Club"
+        ],
+        "currentrm": [
+            "Nagisa Ran",
+            "Kaoru Hakaze"
+        ],
+        "pastrm": [],
+        "ss": "Pisces",
+        "age": "16-17",
+        "shuffle": [
+            "BLEND+"
+        ]
+    },
+    {
+        "name": "Rinne Amagi",
+        "nimg": "images\\Rinne_Amagi.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Crazy:B",
+        "uimg": "images\\CrazyB.png",
+        "year": "No school",
+        "hc": "Red|Maroon",
+        "ec": "Blue",
+        "c": "#B7282E",
+        "bt": "A",
+        "h": 181,
+        "w": 61,
+        "circles": [
+            "ASOBI Club",
+            "CRAFTMONSTER"
+        ],
+        "currentrm": [
+            "Kanata Shinkai",
+            "Hiyori Tomoe"
+        ],
+        "pastrm": [
+            [
+                "Niki Shiina",
+                "Kohaku Oukawa",
+                "HiMERU"
+            ]
+        ],
+        "ss": "Taurus",
+        "age": "20-21",
+        "shuffle": [
+            "Flambe"
+        ]
+    },
+    {
+        "name": "HiMERU",
+        "nimg": "images\\HiMERU.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Crazy:B",
+        "uimg": "images\\CrazyB.png",
+        "year": "3",
+        "hc": "Blue",
+        "ec": "Yellow",
+        "c": "#89C3EB",
+        "bt": "O",
+        "h": 178,
+        "w": 56,
+        "circles": [
+            "Sweets Fan Club",
+            "Ibara Lecture"
+        ],
+        "currentrm": [
+            "Tetora Nagumo",
+            "Arashi Narukami"
+        ],
+        "pastrm": [
+            [
+                "Rinne Amagi",
+                "Kohaku Oukawa",
+                "Niki Shiina"
+            ]
+        ],
+        "ss": "Cancer",
+        "age": "18-19",
+        "shuffle": [
+            "XXVeil"
+        ]
+    },
+    {
+        "name": "Kohaku Oukawa",
+        "nimg": "images\\Kohaku_Oukawa.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Crazy:B",
+        "uimg": "images\\CrazyB.png",
+        "year": "No school",
+        "hc": "Pink",
+        "ec": "Purple",
+        "c": "#F4B3C2",
+        "bt": "B",
+        "h": 168,
+        "w": 51,
+        "circles": [
+            "Kaori",
+            "Sweets Fan Club"
+        ],
+        "currentrm": [
+            "Jun Sazanami"
+        ],
+        "pastrm": [
+            [
+                "Esu"
+            ],
+            [
+                "Jun Sazanami"
+            ],
+            [
+                "Rinne Amagi",
+                "Niki Shiina",
+                "HiMERU"
+            ]
+        ],
+        "ss": "Aquarius",
+        "age": "15-16",
+        "shuffle": [
+            "La Mort"
+        ]
+    },
+    {
+        "name": "Niki Shiina",
+        "nimg": "images\\Niki_Shiina.png",
+        "agency": "COSMIC PRODUCTION",
+        "aimg": "images\\COSMIC_PRODUCTION.png",
+        "unit": "Crazy:B",
+        "uimg": "images\\CrazyB.png",
+        "year": "No school",
+        "hc": "Gray",
+        "ec": "Blue",
+        "c": "#507EA5",
+        "bt": "AB",
+        "h": 176,
+        "w": 61,
+        "circles": [
+            "Niki's Kitchen",
+            "Overnight Outdoors Party"
+        ],
+        "currentrm": [
+            "Hinata Aoi",
+            "Hiiro Amagi"
+        ],
+        "pastrm": [
+            [
+                "Rinne Amagi",
+                "Kohaku Oukawa",
+                "HiMERU"
+            ]
+        ],
+        "ss": "Libra",
+        "age": "18-19",
+        "shuffle": [
+            "/AtoZ",
+            "MVNV\r"
+        ]
+    },
+    {
+        "name": "Rei Sakuma",
+        "nimg": "images\\Rei_Sakuma.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "UNDEAD",
+        "uimg": "images\\UNDEAD.png",
+        "year": "Graduated",
+        "hc": "Black",
+        "ec": "Orange|Brown",
+        "c": "#47266E",
+        "bt": "B",
+        "h": 179,
+        "w": 61,
+        "circles": [
+            "BB",
+            "Mystery Researchers"
+        ],
+        "currentrm": [
+            "Eichi Tenshouin",
+            "Aira Shiratori"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "19-20",
+        "shuffle": [
+            "La Mort",
+            "MVNV\r"
+        ]
+    },
+    {
+        "name": "Kaoru Hakaze",
+        "nimg": "images\\Kaoru_Hakaze.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "UNDEAD",
+        "uimg": "images\\UNDEAD.png",
+        "year": "Graduated",
+        "hc": "Blond",
+        "ec": "Gray",
+        "c": "#FDD35C",
+        "bt": "B",
+        "h": 178,
+        "w": 63,
+        "circles": [
+            "BIBLION",
+            "OCEANS"
+        ],
+        "currentrm": [
+            "Nagisa Ran",
+            "Yuta Aoi"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "18-19",
+        "shuffle": [
+            "/AtoZ"
+        ]
+    },
+    {
+        "name": "Koga Oogami",
+        "nimg": "images\\Koga_Oogami.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "UNDEAD",
+        "uimg": "images\\UNDEAD.png",
+        "year": "3",
+        "hc": "Gray",
+        "ec": "Yellow",
+        "c": "#C9CACA",
+        "bt": "A",
+        "h": 175,
+        "w": 58,
+        "circles": [
+            "ANIMALS",
+            "BB"
+        ],
+        "currentrm": [
+            "Tatsumi Kazehaya"
+        ],
+        "pastrm": [
+            [
+                "Kanna"
+            ]
+        ],
+        "ss": "Cancer",
+        "age": "17-18",
+        "shuffle": [
+            "BLEND+"
+        ]
+    },
+    {
+        "name": "Adonis Otogari",
+        "nimg": "images\\Adonis_Otogari.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "UNDEAD",
+        "uimg": "images\\UNDEAD.png",
+        "year": "3",
+        "hc": "Purple",
+        "ec": "Yellow",
+        "c": "#915DA3",
+        "bt": "A",
+        "h": 178,
+        "w": 64,
+        "circles": [
+            "Sports Survivors",
+            "Kaori"
+        ],
+        "currentrm": [
+            "Chiaki Morisawa",
+            "Makoto Yuuki"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "17-18",
+        "shuffle": [
+            "BUTOUKAI"
+        ]
+    },
+    {
+        "name": "Tomoya Mashiro",
+        "nimg": "images\\Tomoya_Mashiro.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "Ra*bits",
+        "uimg": "images\\Ra_bits.png",
+        "year": "2",
+        "hc": "Blond",
+        "ec": "Gray",
+        "c": "#EFDDB3",
+        "bt": "A",
+        "h": 168,
+        "w": 53,
+        "circles": [
+            "Dramatica",
+            "ANIMALS"
+        ],
+        "currentrm": [
+            "Mayoi Ayase"
+        ],
+        "pastrm": [
+            [
+                "Ibuki Taki"
+            ]
+        ],
+        "ss": "Aries",
+        "age": "16-17",
+        "shuffle": [
+            "Flambe",
+            "Ha/Lo\r"
+        ]
+    },
+    {
+        "name": "Nazuna Nito",
+        "nimg": "images\\Nazuna_Nito.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "Ra*bits",
+        "uimg": "images\\Ra_bits.png",
+        "year": "Graduated",
+        "hc": "Blond",
+        "ec": "Red|Maroon",
+        "c": "#FFEC47",
+        "bt": "O",
+        "h": 160,
+        "w": 49,
+        "circles": [
+            "ANIMALS",
+            "Mystery Researchers"
+        ],
+        "currentrm": [
+            "Leo Tsukinaga",
+            "Natsume Sakasaki"
+        ],
+        "pastrm": [],
+        "ss": "Taurus",
+        "age": "18-19",
+        "shuffle": [
+            "XXVeil"
+        ]
+    },
+    {
+        "name": "Mitsuru Tenma",
+        "nimg": "images\\Mitsuru_Tenma.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "Ra*bits",
+        "uimg": "images\\Ra_bits.png",
+        "year": "2",
+        "hc": "Orange|Brown",
+        "ec": "Yellow",
+        "c": "#ED6D35",
+        "bt": "O",
+        "h": 168,
+        "w": 54,
+        "circles": [
+            "Sports Survivors",
+            "Overnight Outdoors Party"
+        ],
+        "currentrm": [
+            "Tsumugi Aoba",
+            "Ibara Saegusa",
+            "Midori Takamine"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "16-17",
+        "shuffle": [
+            "/AtoZ"
+        ]
+    },
+    {
+        "name": "Hajime Shino",
+        "nimg": "images\\Hajime_Shino.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "Ra*bits",
+        "uimg": "images\\Ra_bits.png",
+        "year": "2",
+        "hc": "Blue",
+        "ec": "Purple",
+        "c": "#CBB8D9",
+        "bt": "AB",
+        "h": 165,
+        "w": 50,
+        "circles": [
+            "BIBLION",
+            "FLAVOR",
+            "Gardenia"
+        ],
+        "currentrm": [
+            "Keito Hasumi",
+            "Hokuto Hidaka"
+        ],
+        "pastrm": [],
+        "ss": "Cancer",
+        "age": "16-17",
+        "shuffle": [
+            "Branco",
+            "EVIL NUM+\r"
+        ]
+    },
+    {
+        "name": "Keito Hasumi",
+        "nimg": "images\\Keito_Hasumi.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "AKATSUKI",
+        "uimg": "images\\AKATSUKI.png",
+        "year": "Graduated",
+        "hc": "Green ",
+        "ec": "Green",
+        "c": "#316745",
+        "bt": "A",
+        "h": 178,
+        "w": 60,
+        "circles": [
+            "Dramatica",
+            "Keito Lecture",
+            "Manga Club"
+        ],
+        "currentrm": [
+            "Hokuto Hidaka",
+            "Hajime Shino"
+        ],
+        "pastrm": [],
+        "ss": "Virgo",
+        "age": "18-19",
+        "shuffle": [
+            "Ring.A.Bell"
+        ]
+    },
+    {
+        "name": "Kuro Kiryu",
+        "nimg": "images\\Kuro_Kiryu.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "AKATSUKI",
+        "uimg": "images\\AKATSUKI.png",
+        "year": "Graduated",
+        "hc": "Red|Maroon",
+        "ec": "Green",
+        "c": "#E83929",
+        "bt": "O",
+        "h": 181,
+        "w": 65,
+        "circles": [
+            "SHIN",
+            "Overnight Outdoors Party"
+        ],
+        "currentrm": [
+            "Izumi Sena",
+            "Shu Itsuki",
+            "Mao Isara"
+        ],
+        "pastrm": [],
+        "ss": "Aquarius",
+        "age": "18-19",
+        "shuffle": [
+            "BUTOUKAI"
+        ]
+    },
+    {
+        "name": "Souma Kanzaki",
+        "nimg": "images\\Souma_Kanzaki.png",
+        "agency": "Rhythm Link",
+        "aimg": "images\\Rhythm_Link.png",
+        "unit": "AKATSUKI",
+        "uimg": "images\\AKATSUKI.png",
+        "year": "3",
+        "hc": "Purple",
+        "ec": "Purple",
+        "c": "#5654A2",
+        "bt": "A",
+        "h": 174,
+        "w": 55,
+        "circles": [
+            "Kaori",
+            "Niki's Kitchen",
+            "OCEANS"
+        ],
+        "currentrm": [
+            "Shinobu Sengoku",
+            "Tsukasa Suou"
+        ],
+        "pastrm": [],
+        "ss": "Taurus",
+        "age": "17-18",
+        "shuffle": [
+            "XXVeil"
+        ]
+    },
+    {
+        "name": "Tsukasa Suou",
+        "nimg": "images\\Tsukasa_Suou.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Knights",
+        "uimg": "images\\Knights.png",
+        "year": "2",
+        "hc": "Red|Maroon",
+        "ec": "Purple",
+        "c": "#942343",
+        "bt": "A",
+        "h": 168,
+        "w": 54,
+        "circles": [
+            "BIBLION",
+            "Sweets Fan Club",
+            "Kaori"
+        ],
+        "currentrm": [
+            "Shinobu Sengoku",
+            "Souma Kanzaki"
+        ],
+        "pastrm": [],
+        "ss": "Aries",
+        "age": "16-17",
+        "shuffle": [
+            "BLEND+",
+            "Ha/Lo\r"
+        ]
+    },
+    {
+        "name": "Leo Tsukinaga",
+        "nimg": "images\\Leo_Tsukinaga.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Knights",
+        "uimg": "images\\Knights.png",
+        "year": "Graduated",
+        "hc": "Orange|Brown",
+        "ec": "Green",
+        "c": "#ED6D52",
+        "bt": "O",
+        "h": 169,
+        "w": 53,
+        "circles": [
+            "Dramatica",
+            "Overnight Outdoors Party"
+        ],
+        "currentrm": [
+            "Natsume Sakasaki",
+            "Nazuna Nito"
+        ],
+        "pastrm": [],
+        "ss": "Taurus",
+        "age": "18-19",
+        "shuffle": [
+            "Ring.A.Bell"
+        ]
+    },
+    {
+        "name": "Izumi Sena",
+        "nimg": "images\\Izumi_Sena.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Knights",
+        "uimg": "images\\Knights.png",
+        "year": "Graduated",
+        "hc": "Gray",
+        "ec": "Blue",
+        "c": "#BBDBF3",
+        "bt": "A",
+        "h": 172,
+        "w": 61,
+        "circles": [
+            "Niki's Kitchen",
+            "OCEANS"
+        ],
+        "currentrm": [
+            "Kuro Kiryu",
+            "Mao Isara",
+            "Shu Itsuki"
+        ],
+        "pastrm": [],
+        "ss": "Scorpio",
+        "age": "18-19",
+        "shuffle": [
+            "XXVeil"
+        ]
+    },
+    {
+        "name": "Ritsu Sakuma",
+        "nimg": "images\\Ritsu_Sakuma.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Knights",
+        "uimg": "images\\Knights.png",
+        "year": "3",
+        "hc": "Black",
+        "ec": "Orange|Brown",
+        "c": "#001E43",
+        "bt": "AB",
+        "h": 170,
+        "w": 54,
+        "circles": [
+            "FLAVOR",
+            "CRAFTMONSTER"
+        ],
+        "currentrm": [
+            "Mika Kagehira"
+        ],
+        "pastrm": [
+            [
+                "Yume"
+            ]
+        ],
+        "ss": "Virgo",
+        "age": "18-19",
+        "shuffle": [
+            "La Mort",
+            "EVIL NUM+\r"
+        ]
+    },
+    {
+        "name": "Arashi Narukami",
+        "nimg": "images\\Arashi_Narukami.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Knights",
+        "uimg": "images\\Knights.png",
+        "year": "3",
+        "hc": "Blond",
+        "ec": "Purple",
+        "c": "#EDDE7B",
+        "bt": "B",
+        "h": 176,
+        "w": 59,
+        "circles": [
+            "Dramatica",
+            "Pretty 5"
+        ],
+        "currentrm": [
+            "Tetora Nagumo",
+            "HiMERU"
+        ],
+        "pastrm": [],
+        "ss": "Pisces",
+        "age": "17-18",
+        "shuffle": [
+            "Getto Spectacle"
+        ]
+    },
+    {
+        "name": "Natsume Sakasaki",
+        "nimg": "images\\Natsume_Sakasaki.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Switch",
+        "uimg": "images\\Switch.png",
+        "year": "3",
+        "hc": "Red|Maroon",
+        "ec": "Yellow",
+        "c": "#D70035",
+        "bt": "AB",
+        "h": 170,
+        "w": 53,
+        "circles": [
+            "Dramatica",
+            "Ibara Lecture",
+            "Gardenia"
+        ],
+        "currentrm": [
+            "Leo Tsukinaga",
+            "Nazuna Nito"
+        ],
+        "pastrm": [],
+        "ss": "Aquarius",
+        "age": "17-18",
+        "shuffle": [
+            "/AtoZ",
+            "EVIL NUM+\r"
+        ]
+    },
+    {
+        "name": "Tsumugi Aoba",
+        "nimg": "images\\Tsumugi_Aoba.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Switch",
+        "uimg": "images\\Switch.png",
+        "year": "Graduated",
+        "hc": "Blue",
+        "ec": "Yellow",
+        "c": "#00608D",
+        "bt": "O",
+        "h": 176,
+        "w": 58,
+        "circles": [
+            "BIBLION",
+            "Mystery Researchers"
+        ],
+        "currentrm": [
+            "Ibara Saegusa",
+            "Midori Takamine",
+            "Mitsuru Tenma"
+        ],
+        "pastrm": [],
+        "ss": "Leo",
+        "age": "18-19",
+        "shuffle": [
+            "BLEND+",
+            "MVNV\r"
+        ]
+    },
+    {
+        "name": "Sora Harukawa",
+        "nimg": "images\\Sora_Harukawa.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "Switch",
+        "uimg": "images\\Switch.png",
+        "year": "2",
+        "hc": "Blond",
+        "ec": "Blue",
+        "c": "#FFF352",
+        "bt": "B",
+        "h": 165,
+        "w": 50,
+        "circles": [
+            "ASOBI Club",
+            "Ibara Lecture"
+        ],
+        "currentrm": [
+            "Madara Mikejima",
+            "Wataru Hibiki",
+            "Subaru Akehoshi"
+        ],
+        "pastrm": [],
+        "ss": "Cancer",
+        "age": "16-17",
+        "shuffle": [
+            "Branco"
+        ]
+    },
+    {
+        "name": "Madara Mikejima",
+        "nimg": "images\\Madara_Mikejima.png",
+        "agency": "NEW DIMENSION",
+        "aimg": "images\\NEW_DIMENSION.png",
+        "unit": "MaM",
+        "uimg": "images\\MaM.png",
+        "year": "No school",
+        "hc": "Orange|Brown",
+        "ec": "Blue",
+        "c": "#622D18",
+        "bt": "A",
+        "h": 180,
+        "w": 64,
+        "circles": [
+            "Kaori",
+            "SHIN"
+        ],
+        "currentrm": [
+            "Sora Harukawa",
+            "Subaru Akehoshi",
+            "Wataru Hibiki"
+        ],
+        "pastrm": [],
+        "ss": "Taurus",
+        "age": "18-19",
+        "shuffle": [
+            "BUTOUKAI",
+            "MVNV"
+        ]
+    }
+]

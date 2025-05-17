@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ensembl</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script>
+        var cd = new Date();
+        window.d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 50);
+    </script>
+    <script src="./enstars.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+    <input id="enstar_input" list="enstar_names" placeholder="Start guessing...">
+    <button id="enstar_button">Submit Guess</button>
+    <datalist id="enstar_names"></datalist>
+    <script>
+        var list = document.getElementById("enstar_names");
+        window.names = [];
+        window.guessed_names = [];
+        window.game_won = false;
+        enstars.forEach(function (item) {
+            var option = document.createElement("option");
+            option.value = item.name;
+            names.push(item.name.toUpperCase())
+            list.appendChild(option);
+        })
+        var options = Array.from(list.options);
+        options.sort((a, b) => {
+            return a.value.localeCompare(b.value);
+        })
+        list.innerHTML = "";
+        options.forEach(option => {
+            list.appendChild(option);
+        })
+    </script>
+    <script>
+        var input = document.getElementById("enstar_input")
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("enstar_button").click();
+            }
+        })
+    </script>
+    <script>
+        function enstar_button() {
+            if (names.includes(document.getElementById("enstar_input").value.toUpperCase())
+                && !guessed_names.includes(document.getElementById("enstar_input").value.toUpperCase())) {
+                window.enstar_guess = document.getElementById("enstar_input").value;
+                document.getElementById("enstar_input").value = "";
+                var T = document.getElementById("enstars_table");
+                addRow(T, enstars[names.findIndex(star_names => star_names == enstar_guess.toUpperCase())]);
+                guessed_names.push(enstar_guess.toUpperCase());
+                var list = document.getElementById("enstar_names");
+                list.innerHTML = "";
+                enstars.forEach(function (item) {
+                    if (!guessed_names.includes(item.name.toUpperCase())) {
+                        var option = document.createElement("option");
+                        option.value = item.name;
+                        list.appendChild(option);
+                    }
+                })
+                var options = Array.from(list.options);
+                options.sort((a, b) => {
+                    return a.value.localeCompare(b.value);
+                })
+                list.innerHTML = "";
+                options.forEach(option => {
+                    list.appendChild(option);
+                })
+                console.log(enstar_guess);
+                if (enstar_guess.toUpperCase() == enstars[d].name.toUpperCase()) {
+                    console.log("You win!");
+                    document.getElementById("enstar_input").disabled = true;
+                    document.getElementById("enstar_button").disabled = true;
+                    game_won = true;
+                }
+            }
+        }
+        document.getElementById("enstar_button").addEventListener("click", enstar_button, false)
+    </script>
+
+    <table id="enstars_table">
+        <thread>
+            <tr>
+                <th>Guess</th>
+                <th>Agency</th>
+                <th>Unit</th>
+                <th>Year</th>
+                <th>Hair Color</th>
+                <th>Eye Color</th>
+                <th>Blood Type</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Circles</th>
+                <th>Roommates</th>
+                <th>Star Sign</th>
+                <th>Age</th>
+                <th>Shuffle Unit</th>
+            </tr>
+        </thread>
+    </table>
+    <script>
+        function addRow(table, enstar) {
+            const tB = document.createElement("tbody");
+            const frag = document.createDocumentFragment();
+            const row = tB.insertRow();
+            var imgc = row.insertCell();
+            imgc.textContent = enstar.name + " image here";
+            imgc.innerHTML = `<img src=${enstar.nimg} alt='${enstar.name}' style="height: 15vw; min-height: 30px;">`
+            imgc.onload = function () { context }
+            imgc.style.backgroundColor = enstar.c
+            var agencyc = row.insertCell();
+            agencyc.textContent = enstar.agency;
+            agencyc.innerHTML = `<img src=${enstar.aimg} alt='${enstar.agency}' style="width: 6vw; min-height: 30px;">`
+            if (enstar.agency == enstars[d].agency) {
+                agencyc.style.backgroundColor = "Green";
+            } else {
+                agencyc.style.backgroundColor = "Red";
+            }
+            var unitc = row.insertCell();
+            unitc.textContent = enstar.unit;
+            unitc.innerHTML = `<img src=${enstar.uimg} alt='${enstar.unit}' style="width: 12vw; min-height: 30px;">`
+            if (enstar.unit == enstars[d].unit) {
+                unitc.style.backgroundColor = "Green";
+            } else {
+                unitc.style.backgroundColor = "Red";
+            }
+            var yearc = row.insertCell();
+            yearc.textContent = enstar.year;
+            if (enstar.year == enstars[d].year) {
+                yearc.style.backgroundColor = "Green";
+            } else {
+                yearc.style.backgroundColor = "Red";
+            }
+            var hcc = row.insertCell();
+            hcc.textContent = enstar.hc;
+            if (enstar.hc.includes("/") || enstars[d].hc.includes("/")) {
+                if (enstar.hc == enstars[d].hc) {
+                    hcc.style.backgroundColor = "Green";
+                } else if (enstar.hc.split("/").some(item => enstars[d].hc.split("/").includes(item))) {
+                    hcc.style.backgroundColor = "Yellow";
+                } else {
+                    hcc.style.backgroundColor = "Red";
+                }
+            } else {
+                if (enstar.hc == enstars[d].hc) {
+                    hcc.style.backgroundColor = "Green";
+                } else {
+                    hcc.style.backgroundColor = "Red";
+                }
+            }
+            var ecc = row.insertCell();
+            ecc.textContent = enstar.ec;
+            if (enstar.ec.includes("/") || enstars[d].ec.includes("/")) {
+                if (enstar.ec == enstars[d].ec) {
+                    ecc.style.backgroundColor = "Green";
+                } else if (enstar.ec.split("/").some(item => enstars[d].ec.split("/").includes(item))) {
+                    ecc.style.backgroundColor = "Yellow";
+                } else {
+                    ecc.style.backgroundColor = "Red";
+                }
+            } else {
+                if (enstar.ec == enstars[d].ec) {
+                    ecc.style.backgroundColor = "Green";
+                } else {
+                    ecc.style.backgroundColor = "Red";
+                }
+            }
+            var btc = row.insertCell();
+            btc.textContent = enstar.bt;
+            if (enstar.bt == enstars[d].bt) {
+                btc.style.backgroundColor = "Green";
+            } else {
+                btc.style.backgroundColor = "Red";
+            }
+            var hc = row.insertCell();
+            if (enstar.h == enstars[d].h) {
+                hc.style.backgroundColor = "Green";
+                hc.textContent = enstar.h + " =";
+            } else if (enstar.h > enstars[d].h) {
+                hc.style.backgroundColor = "Red";
+                hc.textContent = enstar.h + " \u2193";
+            } else {
+                hc.style.backgroundColor = "Red";
+                hc.textContent = enstar.h + " \u2191";
+            }
+            var wc = row.insertCell();
+            if (enstar.w == enstars[d].w) {
+                wc.style.backgroundColor = "Green";
+                wc.textContent = enstar.w + " =";
+            } else if (enstar.w > enstars[d].w) {
+                wc.style.backgroundColor = "Red";
+                wc.textContent = enstar.w + " \u2193";
+            } else {
+                wc.style.backgroundColor = "Red";
+                wc.textContent = enstar.w + " \u2191";
+            }
+            var circlesc = row.insertCell();
+            circlesc.textContent = enstar.circles.join(", ");
+            if (enstar.circles.every(item => enstars[d].circles.includes(item))
+                && enstars[d].circles.every(item => enstar.circles.includes(item))) {
+                circlesc.style.backgroundColor = "Green";
+            } else if (enstar.circles.some(item => enstars[d].circles.includes(item))) {
+                circlesc.style.backgroundColor = "Yellow";
+            } else {
+                circlesc.style.backgroundColor = "Red";
+            }
+            var rmc = row.insertCell();
+            if (enstars[d].name == enstar.name) {
+                rmc.style.backgroundColor = "Green";
+                rmc.textContent = "Self";
+            } else if (enstars[d].currentrm.includes(enstar.name)) {
+                rmc.style.backgroundColor = "Green";
+                rmc.textContent = "Current";
+            } else if (enstars[d].pastrm.some(item => item.includes(enstar.name))) {
+                rmc.style.backgroundColor = "Yellow";
+                rmc.textContent = "Temporarily";
+            } else {
+                rmc.style.backgroundColor = "Red";
+                rmc.textContent = "Never";
+            }
+            var ssc = row.insertCell();
+            ssc.textContent = enstar.ss;
+            if (enstar.ss == enstars[d].ss) {
+                ssc.style.backgroundColor = "Green";
+            } else {
+                ssc.style.backgroundColor = "Red";
+            }
+            var agec = row.insertCell();
+            agec.textContent = enstar.age;
+            if (enstar.age == enstars[d].age) {
+                agec.style.backgroundColor = "Green";
+            } else {
+                agec.style.backgroundColor = "Red";
+            }
+            var shufflec = row.insertCell();
+            shufflec.textContent = enstar.shuffle.join(", ");
+            if (enstar.shuffle.every(item => enstars[d].shuffle.includes(item))
+                && enstars[d].shuffle.every(item => enstar.shuffle.includes(item))) {
+                shufflec.style.backgroundColor = "Green";
+            } else if (enstar.shuffle.some(item => enstars[d].shuffle.includes(item))) {
+                shufflec.style.backgroundColor = "Yellow";
+            } else {
+                shufflec.style.backgroundColor = "Red";
+            }
+            frag.append(tB);
+            table.append(frag);
+        }
+    </script>
+    <button id="random">Randomize!</button>
+    <button id="daily">Daily</button>
+    <script>
+        function random_button() {
+            var q = new Date();
+            d = Math.floor(Math.abs(Math.sin(Math.sqrt(q.getMilliseconds() * Math.E))) * 50);
+            console.log("Randomized!");
+            document.getElementById("enstar_input").disabled = false;
+            document.getElementById("enstar_button").disabled = false;
+            game_won = false;
+            list = document.getElementById("enstar_names");
+            list.innerHTML = "";
+            window.names = [];
+            window.guessed_names = [];
+            enstars.forEach(function (item) {
+                option = document.createElement("option");
+                option.value = item.name;
+                names.push(item.name.toUpperCase())
+                list.appendChild(option);
+            })
+            var options = Array.from(list.options);
+            options.sort((a, b) => {
+                return a.value.localeCompare(b.value);
+            })
+            list.innerHTML = "";
+            options.forEach(option => {
+                list.appendChild(option);
+            })
+            var T = document.getElementById("enstars_table");
+            while (T.rows.length > 1) {
+                T.deleteRow(T.rows.length - 1);
+            }
+        }
+        document.getElementById("random").addEventListener("click", random_button, false)
+        function daily_button() {
+            d = Math.floor(Math.abs((Math.sin(Math.ceil((cd - new Date(cd.getFullYear(), 0, 1) + 1) / 86400000) * cd.getFullYear()) * 10000 % 10 / 10)) * 50);
+            document.getElementById("enstar_input").disabled = false;
+            document.getElementById("enstar_button").disabled = false;
+            game_won = false;
+            list = document.getElementById("enstar_names");
+            list.innerHTML = "";
+            window.names = [];
+            window.guessed_names = [];
+            enstars.forEach(function (item) {
+                option = document.createElement("option");
+                option.value = item.name;
+                names.push(item.name.toUpperCase())
+                list.appendChild(option);
+            })
+            var options = Array.from(list.options);
+            options.sort((a, b) => {
+                return a.value.localeCompare(b.value);
+            })
+            list.innerHTML = "";
+            options.forEach(option => {
+                list.appendChild(option);
+            })
+            var T = document.getElementById("enstars_table");
+            while (T.rows.length > 1) {
+                T.deleteRow(T.rows.length - 1);
+            }
+        }
+        document.getElementById("daily").addEventListener("click", daily_button, false)
+    </script>
+</body>
+
+</html>
