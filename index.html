@@ -121,21 +121,18 @@
             const frag = document.createDocumentFragment();
             const row = tB.insertRow();
             var imgc = row.insertCell();
-            imgc.textContent = enstar.name + " image here";
             imgc.innerHTML = `<img src=${enstar.nimg} alt='${enstar.name}' style="height: 15vw; min-height: 30px;">`
             imgc.onload = function () { context }
             imgc.style.backgroundColor = enstar.c
             var agencyc = row.insertCell();
-            agencyc.textContent = enstar.agency;
-            agencyc.innerHTML = `<img src=${enstar.aimg} alt='${enstar.agency}' style="width: 6vw; min-height: 30px;">`
+            agencyc.innerHTML = `<img src=${enstar.aimg} alt='${enstar.agency}' style="width: 6vw; min-width: 30px;">`
             if (enstar.agency == enstars[d].agency) {
                 agencyc.style.backgroundColor = "Green";
             } else {
                 agencyc.style.backgroundColor = "Red";
             }
             var unitc = row.insertCell();
-            unitc.textContent = enstar.unit;
-            unitc.innerHTML = `<img src=${enstar.uimg} alt='${enstar.unit}' style="width: 12vw; min-height: 30px;">`
+            unitc.innerHTML = `<img src=${enstar.uimg} alt='${enstar.unit}' style="width: 12vw; min-width: 30px;">`
             if (enstar.unit == enstars[d].unit) {
                 unitc.style.backgroundColor = "Green";
             } else {
