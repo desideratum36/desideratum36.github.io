@@ -1,0 +1,6 @@
+{
+    "learning_rate": 0.1,
+    "max_depth": 6,
+    "max_features": "sqrt",
+    "n_estimators": 828
+}

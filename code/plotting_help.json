@@ -1,0 +1,40 @@
+{
+    "abbrev": {
+        "polyacrylics": "PAcr",
+        "polyamides/thioamides": "PAmd/TAmd",
+        "polyanhydrides/thioanhydrides": "PAnh/TAnh",
+        "polycarbonates/thiocarbonates": "PCbn/TCbn",
+        "polydienes": "PD",
+        "polyesters/thioesters": "PEst/TEst",
+        "polyhalo-olefins": "PHO",
+        "polyimides/thioimides": "PImd/TImd",
+        "polyimines": "PImn",
+        "polyketones/thioketones": "PKet/TKet",
+        "polyolefins": "PO",
+        "polyoxides/ethers/acetals": "POx/Eth/Acl",
+        "polyphenylenes": "PPh",
+        "polyphosphazenes": "PPz",
+        "polysiloxanes/silanes": "PSx/Sl",
+        "polystyrenes": "PSt",
+        "polysulfides": "PSf",
+        "polysulfones/sulfoxides/sulfonates/sulfoamides": "PSfO/Sx/Snt/Smd",
+        "polyureas/thioureas": "PUra/TUra",
+        "polyurethanes/thiourethanes": "PUth/TUth",
+        "polyvinyls": "PV"
+    },
+    "colors": {
+        "Aromatic": "#d62728",
+        "Halogen": "#8c564b",
+        "O": "#1f77b4",
+        "N": "#2ca02c",
+        "S": "#ff7f0e",
+        "P": "#9467bd",
+        "Si": "#17becf",
+        "Hydrocarbon": "#7f7f7f"
+    },
+    "hatches": {
+        "O": "//",
+        "N": "\\\\",
+        "S": ".."
+    }
+}

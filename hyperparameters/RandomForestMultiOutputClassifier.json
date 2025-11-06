@@ -1,0 +1,6 @@
+{
+    "class_weight": "balanced",
+    "max_depth": 31,
+    "max_features": 0.5,
+    "n_estimators": 926
+}

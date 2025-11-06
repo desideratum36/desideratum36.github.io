@@ -1,0 +1,5 @@
+{
+    "max_depth": 39,
+    "max_features": 0.5,
+    "n_estimators": 1023
+}

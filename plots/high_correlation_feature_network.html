@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%; height: 100%;;
+                 height: 800px;
+                 background-color: #3B3B3B;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%; height: 100%;">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "red", "font": {"color": "white"}, "id": "NHOHCount", "label": "NHOHCount", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumHDonors", "label": "NumHDonors", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "fr_NH1", "label": "fr_NH1", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Kappa1", "label": "Kappa1", "shape": "dot"}, {"color": "green", "font": {"color": "white"}, "id": "MolWt", "label": "MolWt", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "MolLogP", "label": "MolLogP", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumValenceElectrons", "label": "NumValenceElectrons", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "MolMR", "label": "MolMR", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Kappa2", "label": "Kappa2", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "LabuteASA", "label": "LabuteASA", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "SMR_VSA7", "label": "SMR_VSA7", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "fr_benzene", "label": "fr_benzene", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "SlogP_VSA6", "label": "SlogP_VSA6", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "VSA_EState6", "label": "VSA_EState6", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "HeavyAtomCount", "label": "HeavyAtomCount", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "NumAromaticCarbocycles", "label": "NumAromaticCarbocycles", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumAromaticRings", "label": "NumAromaticRings", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "HeavyAtomMolWt", "label": "HeavyAtomMolWt", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "PEOE_VSA14", "label": "PEOE_VSA14", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "RingCount", "label": "RingCount", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "FpDensityMorgan2", "label": "FpDensityMorgan2", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "FpDensityMorgan3", "label": "FpDensityMorgan3", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "ExactMolWt", "label": "ExactMolWt", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "HallKierAlpha", "label": "HallKierAlpha", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumAliphaticHeterocycles", "label": "NumAliphaticHeterocycles", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "fr_imide", "label": "fr_imide", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi1", "label": "Chi1", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi2n", "label": "Chi2n", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi3n", "label": "Chi3n", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi1n", "label": "Chi1n", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi2v", "label": "Chi2v", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi1v", "label": "Chi1v", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi4n", "label": "Chi4n", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "fr_C_O", "label": "fr_C_O", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "fr_amide", "label": "fr_amide", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "fr_C_O_noCOO", "label": "fr_C_O_noCOO", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "VSA_EState1", "label": "VSA_EState1", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "fr_alkyl_halide", "label": "fr_alkyl_halide", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "fr_halogen", "label": "fr_halogen", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi0", "label": "Chi0", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi0v", "label": "Chi0v", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi0n", "label": "Chi0n", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "Chi3v", "label": "Chi3v", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Chi4v", "label": "Chi4v", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "MaxAbsEStateIndex", "label": "MaxAbsEStateIndex", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "MaxEStateIndex", "label": "MaxEStateIndex", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "SMR_VSA2", "label": "SMR_VSA2", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "fr_nitrile", "label": "fr_nitrile", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumHAcceptors", "label": "NumHAcceptors", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "TPSA", "label": "TPSA", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "NumAtomStereoCenters", "label": "NumAtomStereoCenters", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumUnspecifiedAtomStereoCenters", "label": "NumUnspecifiedAtomStereoCenters", "shape": "dot"}, {"color": "green", "font": {"color": "white"}, "id": "Phi", "label": "Phi", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumRotatableBonds", "label": "NumRotatableBonds", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "Kappa3", "label": "Kappa3", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "BertzCT", "label": "BertzCT", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NOCount", "label": "NOCount", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "VSA_EState2", "label": "VSA_EState2", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumHeteroatoms", "label": "NumHeteroatoms", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "SMR_VSA1", "label": "SMR_VSA1", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "FpDensityMorgan1", "label": "FpDensityMorgan1", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumAmideBonds", "label": "NumAmideBonds", "shape": "dot"}, {"color": "red", "font": {"color": "white"}, "id": "NumAliphaticCarbocycles", "label": "NumAliphaticCarbocycles", "shape": "dot"}, {"color": "gray", "font": {"color": "white"}, "id": "NumSaturatedCarbocycles", "label": "NumSaturatedCarbocycles", "shape": "dot"}]);
+                  edges = new vis.DataSet([{"from": "NHOHCount", "to": "NumHDonors"}, {"from": "NHOHCount", "to": "fr_NH1"}, {"from": "NumHDonors", "to": "fr_NH1"}, {"from": "Kappa1", "to": "MolWt"}, {"from": "Kappa1", "to": "MolLogP"}, {"from": "Kappa1", "to": "NumValenceElectrons"}, {"from": "Kappa1", "to": "MolMR"}, {"from": "Kappa1", "to": "Kappa2"}, {"from": "Kappa1", "to": "LabuteASA"}, {"from": "Kappa1", "to": "HeavyAtomCount"}, {"from": "Kappa1", "to": "ExactMolWt"}, {"from": "Kappa1", "to": "Chi1"}, {"from": "Kappa1", "to": "Chi2n"}, {"from": "Kappa1", "to": "Chi3n"}, {"from": "Kappa1", "to": "Chi0"}, {"from": "Kappa1", "to": "Chi1n"}, {"from": "Kappa1", "to": "Chi0v"}, {"from": "Kappa1", "to": "HeavyAtomMolWt"}, {"from": "Kappa1", "to": "Chi2v"}, {"from": "Kappa1", "to": "BertzCT"}, {"from": "Kappa1", "to": "Chi1v"}, {"from": "Kappa1", "to": "Chi4n"}, {"from": "Kappa1", "to": "Chi0n"}, {"from": "MolWt", "to": "HeavyAtomCount"}, {"from": "MolWt", "to": "ExactMolWt"}, {"from": "MolWt", "to": "Chi1"}, {"from": "MolWt", "to": "Chi2n"}, {"from": "MolWt", "to": "Chi3n"}, {"from": "MolWt", "to": "NumValenceElectrons"}, {"from": "MolWt", "to": "PEOE_VSA14"}, {"from": "MolWt", "to": "Chi0"}, {"from": "MolWt", "to": "MolLogP"}, {"from": "MolWt", "to": "MolMR"}, {"from": "MolWt", "to": "Chi1n"}, {"from": "MolWt", "to": "Chi0v"}, {"from": "MolWt", "to": "HeavyAtomMolWt"}, {"from": "MolWt", "to": "Chi2v"}, {"from": "MolWt", "to": "Kappa2"}, {"from": "MolWt", "to": "BertzCT"}, {"from": "MolWt", "to": "Chi1v"}, {"from": "MolWt", "to": "HallKierAlpha"}, {"from": "MolWt", "to": "Chi4n"}, {"from": "MolWt", "to": "LabuteASA"}, {"from": "MolWt", "to": "Chi0n"}, {"from": "MolLogP", "to": "HeavyAtomCount"}, {"from": "MolLogP", "to": "ExactMolWt"}, {"from": "MolLogP", "to": "Chi1"}, {"from": "MolLogP", "to": "Chi2n"}, {"from": "MolLogP", "to": "Chi3n"}, {"from": "MolLogP", "to": "Chi0"}, {"from": "MolLogP", "to": "NumValenceElectrons"}, {"from": "MolLogP", "to": "MolMR"}, {"from": "MolLogP", "to": "Chi1n"}, {"from": "MolLogP", "to": "Chi0v"}, {"from": "MolLogP", "to": "Chi1v"}, {"from": "MolLogP", "to": "Chi4n"}, {"from": "MolLogP", "to": "LabuteASA"}, {"from": "MolLogP", "to": "Chi0n"}, {"from": "NumValenceElectrons", "to": "HeavyAtomCount"}, {"from": "NumValenceElectrons", "to": "ExactMolWt"}, {"from": "NumValenceElectrons", "to": "Chi1"}, {"from": "NumValenceElectrons", "to": "Chi2n"}, {"from": "NumValenceElectrons", "to": "Chi3n"}, {"from": "NumValenceElectrons", "to": "Chi0"}, {"from": "NumValenceElectrons", "to": "PEOE_VSA14"}, {"from": "NumValenceElectrons", "to": "MolMR"}, {"from": "NumValenceElectrons", "to": "Chi1n"}, {"from": "NumValenceElectrons", "to": "Chi0v"}, {"from": "NumValenceElectrons", "to": "HeavyAtomMolWt"}, {"from": "NumValenceElectrons", "to": "Chi2v"}, {"from": "NumValenceElectrons", "to": "Kappa2"}, {"from": "NumValenceElectrons", "to": "BertzCT"}, {"from": "NumValenceElectrons", "to": "Chi1v"}, {"from": "NumValenceElectrons", "to": "HallKierAlpha"}, {"from": "NumValenceElectrons", "to": "Chi4n"}, {"from": "NumValenceElectrons", "to": "LabuteASA"}, {"from": "NumValenceElectrons", "to": "Chi0n"}, {"from": "MolMR", "to": "HeavyAtomCount"}, {"from": "MolMR", "to": "ExactMolWt"}, {"from": "MolMR", "to": "Chi1"}, {"from": "MolMR", "to": "Chi2n"}, {"from": "MolMR", "to": "Chi3n"}, {"from": "MolMR", "to": "Chi0"}, {"from": "MolMR", "to": "SMR_VSA7"}, {"from": "MolMR", "to": "NumAromaticCarbocycles"}, {"from": "MolMR", "to": "fr_benzene"}, {"from": "MolMR", "to": "NumAromaticRings"}, {"from": "MolMR", "to": "PEOE_VSA14"}, {"from": "MolMR", "to": "SlogP_VSA6"}, {"from": "MolMR", "to": "RingCount"}, {"from": "MolMR", "to": "Chi1n"}, {"from": "MolMR", "to": "Chi0v"}, {"from": "MolMR", "to": "HeavyAtomMolWt"}, {"from": "MolMR", "to": "Chi2v"}, {"from": "MolMR", "to": "Kappa2"}, {"from": "MolMR", "to": "BertzCT"}, {"from": "MolMR", "to": "Chi1v"}, {"from": "MolMR", "to": "HallKierAlpha"}, {"from": "MolMR", "to": "Chi4n"}, {"from": "MolMR", "to": "LabuteASA"}, {"from": "MolMR", "to": "Chi0n"}, {"from": "Kappa2", "to": "ExactMolWt"}, {"from": "Kappa2", "to": "Chi1n"}, {"from": "Kappa2", "to": "Chi0v"}, {"from": "Kappa2", "to": "Phi"}, {"from": "Kappa2", "to": "NumRotatableBonds"}, {"from": "Kappa2", "to": "Kappa3"}, {"from": "Kappa2", "to": "LabuteASA"}, {"from": "Kappa2", "to": "Chi1v"}, {"from": "Kappa2", "to": "Chi0n"}, {"from": "LabuteASA", "to": "HeavyAtomCount"}, {"from": "LabuteASA", "to": "ExactMolWt"}, {"from": "LabuteASA", "to": "Chi1"}, {"from": "LabuteASA", "to": "Chi2n"}, {"from": "LabuteASA", "to": "Chi3n"}, {"from": "LabuteASA", "to": "Chi0"}, {"from": "LabuteASA", "to": "Chi1n"}, {"from": "LabuteASA", "to": "Chi0v"}, {"from": "LabuteASA", "to": "HeavyAtomMolWt"}, {"from": "LabuteASA", "to": "Chi2v"}, {"from": "LabuteASA", "to": "BertzCT"}, {"from": "LabuteASA", "to": "Chi1v"}, {"from": "LabuteASA", "to": "HallKierAlpha"}, {"from": "LabuteASA", "to": "Chi4n"}, {"from": "LabuteASA", "to": "SMR_VSA7"}, {"from": "LabuteASA", "to": "NumAromaticCarbocycles"}, {"from": "LabuteASA", "to": "fr_benzene"}, {"from": "LabuteASA", "to": "PEOE_VSA14"}, {"from": "LabuteASA", "to": "RingCount"}, {"from": "LabuteASA", "to": "Chi0n"}, {"from": "SMR_VSA7", "to": "fr_benzene"}, {"from": "SMR_VSA7", "to": "SlogP_VSA6"}, {"from": "SMR_VSA7", "to": "VSA_EState6"}, {"from": "SMR_VSA7", "to": "HeavyAtomCount"}, {"from": "SMR_VSA7", "to": "Chi1"}, {"from": "SMR_VSA7", "to": "Chi3n"}, {"from": "SMR_VSA7", "to": "NumAromaticCarbocycles"}, {"from": "SMR_VSA7", "to": "Chi0"}, {"from": "SMR_VSA7", "to": "NumAromaticRings"}, {"from": "SMR_VSA7", "to": "BertzCT"}, {"from": "SMR_VSA7", "to": "HallKierAlpha"}, {"from": "SMR_VSA7", "to": "RingCount"}, {"from": "fr_benzene", "to": "HeavyAtomCount"}, {"from": "fr_benzene", "to": "Chi1"}, {"from": "fr_benzene", "to": "NumAromaticCarbocycles"}, {"from": "fr_benzene", "to": "NumAromaticRings"}, {"from": "fr_benzene", "to": "BertzCT"}, {"from": "fr_benzene", "to": "HallKierAlpha"}, {"from": "fr_benzene", "to": "SlogP_VSA6"}, {"from": "fr_benzene", "to": "VSA_EState6"}, {"from": "fr_benzene", "to": "RingCount"}, {"from": "SlogP_VSA6", "to": "Chi1"}, {"from": "SlogP_VSA6", "to": "NumAromaticCarbocycles"}, {"from": "SlogP_VSA6", "to": "NumAromaticRings"}, {"from": "SlogP_VSA6", "to": "BertzCT"}, {"from": "SlogP_VSA6", "to": "HallKierAlpha"}, {"from": "SlogP_VSA6", "to": "VSA_EState6"}, {"from": "SlogP_VSA6", "to": "RingCount"}, {"from": "VSA_EState6", "to": "NumAromaticCarbocycles"}, {"from": "VSA_EState6", "to": "NumAromaticRings"}, {"from": "VSA_EState6", "to": "BertzCT"}, {"from": "VSA_EState6", "to": "HallKierAlpha"}, {"from": "VSA_EState6", "to": "RingCount"}, {"from": "HeavyAtomCount", "to": "NumAromaticCarbocycles"}, {"from": "HeavyAtomCount", "to": "NumAromaticRings"}, {"from": "HeavyAtomCount", "to": "HeavyAtomMolWt"}, {"from": "HeavyAtomCount", "to": "PEOE_VSA14"}, {"from": "HeavyAtomCount", "to": "RingCount"}, {"from": "HeavyAtomCount", "to": "ExactMolWt"}, {"from": "HeavyAtomCount", "to": "Chi1"}, {"from": "HeavyAtomCount", "to": "Chi2n"}, {"from": "HeavyAtomCount", "to": "Chi3n"}, {"from": "HeavyAtomCount", "to": "Chi0"}, {"from": "HeavyAtomCount", "to": "Chi1n"}, {"from": "HeavyAtomCount", "to": "Chi0v"}, {"from": "HeavyAtomCount", "to": "Chi2v"}, {"from": "HeavyAtomCount", "to": "BertzCT"}, {"from": "HeavyAtomCount", "to": "Chi1v"}, {"from": "HeavyAtomCount", "to": "HallKierAlpha"}, {"from": "HeavyAtomCount", "to": "Chi4n"}, {"from": "HeavyAtomCount", "to": "Chi0n"}, {"from": "NumAromaticCarbocycles", "to": "Chi1"}, {"from": "NumAromaticCarbocycles", "to": "NumAromaticRings"}, {"from": "NumAromaticCarbocycles", "to": "RingCount"}, {"from": "NumAromaticCarbocycles", "to": "BertzCT"}, {"from": "NumAromaticCarbocycles", "to": "HallKierAlpha"}, {"from": "NumAromaticRings", "to": "Chi1"}, {"from": "NumAromaticRings", "to": "RingCount"}, {"from": "NumAromaticRings", "to": "BertzCT"}, {"from": "NumAromaticRings", "to": "HallKierAlpha"}, {"from": "HeavyAtomMolWt", "to": "ExactMolWt"}, {"from": "HeavyAtomMolWt", "to": "Chi1"}, {"from": "HeavyAtomMolWt", "to": "Chi2n"}, {"from": "HeavyAtomMolWt", "to": "Chi3n"}, {"from": "HeavyAtomMolWt", "to": "Chi0"}, {"from": "HeavyAtomMolWt", "to": "Chi1n"}, {"from": "HeavyAtomMolWt", "to": "Chi0v"}, {"from": "HeavyAtomMolWt", "to": "PEOE_VSA14"}, {"from": "HeavyAtomMolWt", "to": "RingCount"}, {"from": "HeavyAtomMolWt", "to": "Chi2v"}, {"from": "HeavyAtomMolWt", "to": "BertzCT"}, {"from": "HeavyAtomMolWt", "to": "Chi1v"}, {"from": "HeavyAtomMolWt", "to": "HallKierAlpha"}, {"from": "HeavyAtomMolWt", "to": "Chi4n"}, {"from": "HeavyAtomMolWt", "to": "Chi0n"}, {"from": "PEOE_VSA14", "to": "ExactMolWt"}, {"from": "PEOE_VSA14", "to": "Chi1"}, {"from": "PEOE_VSA14", "to": "Chi2n"}, {"from": "PEOE_VSA14", "to": "Chi3n"}, {"from": "PEOE_VSA14", "to": "Chi0"}, {"from": "PEOE_VSA14", "to": "Chi1n"}, {"from": "PEOE_VSA14", "to": "Chi0v"}, {"from": "PEOE_VSA14", "to": "BertzCT"}, {"from": "PEOE_VSA14", "to": "Chi4n"}, {"from": "PEOE_VSA14", "to": "Chi0n"}, {"from": "RingCount", "to": "Chi1"}, {"from": "RingCount", "to": "Chi2n"}, {"from": "RingCount", "to": "Chi3n"}, {"from": "RingCount", "to": "Chi0"}, {"from": "RingCount", "to": "BertzCT"}, {"from": "RingCount", "to": "HallKierAlpha"}, {"from": "RingCount", "to": "Chi4n"}, {"from": "FpDensityMorgan2", "to": "FpDensityMorgan3"}, {"from": "FpDensityMorgan2", "to": "FpDensityMorgan1"}, {"from": "FpDensityMorgan3", "to": "FpDensityMorgan1"}, {"from": "ExactMolWt", "to": "HallKierAlpha"}, {"from": "ExactMolWt", "to": "Chi1"}, {"from": "ExactMolWt", "to": "Chi2n"}, {"from": "ExactMolWt", "to": "Chi3n"}, {"from": "ExactMolWt", "to": "Chi0"}, {"from": "ExactMolWt", "to": "Chi1n"}, {"from": "ExactMolWt", "to": "Chi0v"}, {"from": "ExactMolWt", "to": "Chi2v"}, {"from": "ExactMolWt", "to": "BertzCT"}, {"from": "ExactMolWt", "to": "Chi1v"}, {"from": "ExactMolWt", "to": "Chi4n"}, {"from": "ExactMolWt", "to": "Chi0n"}, {"from": "HallKierAlpha", "to": "Chi1"}, {"from": "HallKierAlpha", "to": "Chi2n"}, {"from": "HallKierAlpha", "to": "Chi3n"}, {"from": "HallKierAlpha", "to": "Chi0"}, {"from": "HallKierAlpha", "to": "Chi1n"}, {"from": "HallKierAlpha", "to": "Chi0v"}, {"from": "HallKierAlpha", "to": "BertzCT"}, {"from": "HallKierAlpha", "to": "Chi4n"}, {"from": "HallKierAlpha", "to": "Chi0n"}, {"from": "NumAliphaticHeterocycles", "to": "fr_imide"}, {"from": "fr_imide", "to": "fr_amide"}, {"from": "fr_imide", "to": "NumAmideBonds"}, {"from": "Chi1", "to": "Chi2n"}, {"from": "Chi1", "to": "Chi3n"}, {"from": "Chi1", "to": "Chi1n"}, {"from": "Chi1", "to": "Chi2v"}, {"from": "Chi1", "to": "Chi1v"}, {"from": "Chi1", "to": "Chi4n"}, {"from": "Chi1", "to": "Chi0"}, {"from": "Chi1", "to": "Chi0v"}, {"from": "Chi1", "to": "BertzCT"}, {"from": "Chi1", "to": "Chi0n"}, {"from": "Chi2n", "to": "Chi3n"}, {"from": "Chi2n", "to": "Chi2v"}, {"from": "Chi2n", "to": "Chi4n"}, {"from": "Chi2n", "to": "Chi0"}, {"from": "Chi2n", "to": "Chi1n"}, {"from": "Chi2n", "to": "Chi0v"}, {"from": "Chi2n", "to": "BertzCT"}, {"from": "Chi2n", "to": "Chi1v"}, {"from": "Chi2n", "to": "Chi0n"}, {"from": "Chi3n", "to": "Chi4n"}, {"from": "Chi3n", "to": "Chi0"}, {"from": "Chi3n", "to": "Chi1n"}, {"from": "Chi3n", "to": "Chi0v"}, {"from": "Chi3n", "to": "Chi2v"}, {"from": "Chi3n", "to": "BertzCT"}, {"from": "Chi3n", "to": "Chi1v"}, {"from": "Chi3n", "to": "Chi0n"}, {"from": "Chi1n", "to": "Chi0"}, {"from": "Chi1n", "to": "Chi2v"}, {"from": "Chi1n", "to": "Chi1v"}, {"from": "Chi1n", "to": "Chi4n"}, {"from": "Chi1n", "to": "Chi0v"}, {"from": "Chi1n", "to": "BertzCT"}, {"from": "Chi1n", "to": "Chi0n"}, {"from": "Chi2v", "to": "Chi0"}, {"from": "Chi2v", "to": "Chi0v"}, {"from": "Chi2v", "to": "Chi3v"}, {"from": "Chi2v", "to": "Chi4v"}, {"from": "Chi2v", "to": "Chi4n"}, {"from": "Chi2v", "to": "Chi1v"}, {"from": "Chi2v", "to": "Chi0n"}, {"from": "Chi1v", "to": "Chi0"}, {"from": "Chi1v", "to": "Chi0v"}, {"from": "Chi1v", "to": "BertzCT"}, {"from": "Chi1v", "to": "Chi3v"}, {"from": "Chi1v", "to": "Chi4n"}, {"from": "Chi1v", "to": "Chi0n"}, {"from": "Chi4n", "to": "Chi0"}, {"from": "Chi4n", "to": "Chi0v"}, {"from": "Chi4n", "to": "BertzCT"}, {"from": "Chi4n", "to": "Chi0n"}, {"from": "fr_C_O", "to": "fr_amide"}, {"from": "fr_C_O", "to": "fr_C_O_noCOO"}, {"from": "fr_C_O", "to": "VSA_EState2"}, {"from": "fr_C_O", "to": "NumAmideBonds"}, {"from": "fr_amide", "to": "fr_C_O_noCOO"}, {"from": "fr_amide", "to": "NumAmideBonds"}, {"from": "fr_C_O_noCOO", "to": "VSA_EState2"}, {"from": "fr_C_O_noCOO", "to": "NumAmideBonds"}, {"from": "VSA_EState1", "to": "fr_alkyl_halide"}, {"from": "VSA_EState1", "to": "fr_halogen"}, {"from": "fr_alkyl_halide", "to": "fr_halogen"}, {"from": "Chi0", "to": "Chi0v"}, {"from": "Chi0", "to": "Chi0n"}, {"from": "Chi0", "to": "BertzCT"}, {"from": "Chi0v", "to": "BertzCT"}, {"from": "Chi0v", "to": "Chi0n"}, {"from": "Chi0n", "to": "BertzCT"}, {"from": "Chi3v", "to": "Chi4v"}, {"from": "MaxAbsEStateIndex", "to": "MaxEStateIndex"}, {"from": "SMR_VSA2", "to": "fr_nitrile"}, {"from": "NumHAcceptors", "to": "TPSA"}, {"from": "NumHAcceptors", "to": "NOCount"}, {"from": "TPSA", "to": "NOCount"}, {"from": "NumAtomStereoCenters", "to": "NumUnspecifiedAtomStereoCenters"}, {"from": "Phi", "to": "NumRotatableBonds"}, {"from": "Phi", "to": "Kappa3"}, {"from": "NumRotatableBonds", "to": "Kappa3"}, {"from": "NumHeteroatoms", "to": "SMR_VSA1"}, {"from": "NumAliphaticCarbocycles", "to": "NumSaturatedCarbocycles"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "barnesHut": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.07,
+            "damping": 0.0475,
+            "gravitationalConstant": -100,
+            "springConstant": 0.01,
+            "springLength": 250
+        },
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+            <div style="
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                background: rgba(20, 20, 20, 0.92);
+                padding: 10px 14px;
+                border-radius: 8px;
+                font-size: 14px;
+                color: #eee;
+                z-index: 99999;
+                border: 1px solid rgba(255,255,255,0.15);
+                box-shadow: 0 0 8px rgba(0,0,0,0.4);
+                backdrop-filter: blur(4px);
+            ">
+                <div style="font-weight:bold; margin-bottom:6px; text-align:center;">
+                    Legend
+                </div>
+                <div style="margin-bottom:4px;">
+                    <span style="color: #2ecc71; font-size:16px;">●</span> Important
+                </div>
+                <div style="margin-bottom:4px;">
+                    <span style="color: #e74c3c; font-size:16px;">●</span> Removed
+                </div>
+                <div>
+                    <span style="color: #bfbfbf; font-size:16px;">●</span> Other
+                </div>
+            </div>
+        	
+</body>
+</html>
